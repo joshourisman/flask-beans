@@ -12,6 +12,10 @@ def incr(key, member):
 def count(key, member):
     return jsonify(count = db.zscore(key, member))
 
+@app.route('/reset/<key>/<member>/')
+def reset(key, member):
+    return jsonify(count = db.zrem(key, member))
+
 if __name__ == "__main__":
     app.debug = True
     app.run(host='0.0.0.0')
