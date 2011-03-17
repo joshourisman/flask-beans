@@ -26,6 +26,6 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         ],
-    packages=['beans',],
+    py_modules=['beans',],
     install_requires=['flask', 'redis',],
     )
