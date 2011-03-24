@@ -5,7 +5,7 @@ from distutils.core import setup
 
 description = "A simple API for counting beans with Flask and Redis."
 
-VERSION = '1.1'
+VERSION = '1.2'
 
 setup(
     name='flask-beans',
