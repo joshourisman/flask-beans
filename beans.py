@@ -16,6 +16,10 @@ def count(key, member):
 def reset(key, member):
     return jsonify(count = db.zrem(key, member))
 
+@app.route('/list/<key>/')
+def list(key):
+    return jsonify(counts = db.zrange(key, 0, -1, withscores=True))
+
 if __name__ == "__main__":
     app.debug = True
     app.run(host='0.0.0.0')
